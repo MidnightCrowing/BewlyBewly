@@ -151,7 +151,7 @@ function handleRemoveCustomWallpaper() {
                 ? settings.wallpaper === settings.locallyUploadedWallpaper?.url
                 : settings.searchPageWallpaper === settings.locallyUploadedWallpaper?.url }"
               aspect-video bg="$bew-theme-color-20" rounded="$bew-radius" overflow-hidden
-              un-border="4 transparent" w-full
+              un-border="4 transparent" w-full cursor-pointer
               flex="~ items-center justify-center"
               @click="changeWallpaper(settings.locallyUploadedWallpaper?.url || '')"
             >
@@ -199,7 +199,7 @@ function handleRemoveCustomWallpaper() {
           <Tooltip v-for="item in WALLPAPERS" :key="item.url" placement="top" :content="item.name" aspect-video>
             <picture
               aspect-video bg="$bew-fill-1" rounded="$bew-radius" overflow-hidden
-              un-border="4 transparent" w-full
+              un-border="4 transparent" w-full cursor-pointer
               :class="{ 'selected-wallpaper': isGlobal ? settings.wallpaper === item.url : settings.searchPageWallpaper === item.url }"
               @click="changeWallpaper(item.url)"
             >

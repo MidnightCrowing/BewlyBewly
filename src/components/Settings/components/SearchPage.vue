@@ -86,7 +86,7 @@ function changeSearchBarFocusCharacter(url: string) {
           <Tooltip v-for="item in SEARCH_BAR_CHARACTERS" :key="item.url" placement="top" :content="item.name" aspect-square>
             <picture
               aspect-square bg="$bew-fill-1" rounded="$bew-radius" overflow-hidden
-              un-border="4 transparent" w-full
+              un-border="4 transparent" w-full cursor-pointer
               :class="{ 'selected-wallpaper': settings.searchPageSearchBarFocusCharacter === item.url }"
               @click="changeSearchBarFocusCharacter(item.url)"
             >
